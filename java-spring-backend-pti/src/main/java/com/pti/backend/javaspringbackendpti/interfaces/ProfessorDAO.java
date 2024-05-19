@@ -12,11 +12,11 @@ public interface ProfessorDAO extends JpaRepository<Professor, Long> {
     
     @Transactional
     @Modifying
-    @Query(value = "INSERT INTO professores (nome, cpf, email, disciplina) VALUES (?1, ?2, ?3, ?4)", nativeQuery = true)
+    @Query(value = "INSERT INTO professor (nome, cpf, email, disciplina) VALUES (?1, ?2, ?3, ?4)", nativeQuery = true)
     void inserirProfessor(String nome, String cpf, String email, String disciplina);
 
     // Encontra um professor pelo nome
-    @Query(value = "SELECT * FROM professores WHERE nome = ?", nativeQuery = true)
+    @Query(value = "SELECT * FROM professor WHERE nome = ?", nativeQuery = true)
     Professor findByNome(String nome);
 
     // Encontra todos os professores com um determinado departamento

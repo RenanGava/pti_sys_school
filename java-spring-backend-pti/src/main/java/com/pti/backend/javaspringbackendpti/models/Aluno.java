@@ -17,9 +17,8 @@ import lombok.AllArgsConstructor;
 
 public class Aluno {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
     @Column(nullable = false)
     private String nome;
@@ -27,6 +26,7 @@ public class Aluno {
     @Column(nullable = false)
     private String dataNascimento;
 
+    @Id
     @Column(nullable = false)
     private String cpf;
 

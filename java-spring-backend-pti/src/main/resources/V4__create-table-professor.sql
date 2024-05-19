@@ -4,5 +4,5 @@ CREATE TABLE professor (
     nome VARCHAR(100),
     CPF INT NOT NULL,
     email VARCHAR(100) NOT NULL,
-    disciplina VARCHAR(50) NOT NULL,
+    disciplina VARCHAR(50) NOT NULL
 );

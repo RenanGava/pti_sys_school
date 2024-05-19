@@ -1,5 +1,6 @@
 package com.pti.backend.javaspringbackendpti.controllers;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.pti.backend.javaspringbackendpti.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,13 @@ public class CadastroController {
 
     @Autowired
     public CadastroController(CadastroService cadastroService) {
+
         this.cadastroService = cadastroService;
     }
 
     @PostMapping("/aluno")
     @ResponseBody
-    public String cadastrarAluno(@RequestBody Aluno alunoRequest) {
+    public ResponseEntity<String> cadastrarAluno(@RequestBody Aluno alunoRequest) { // (@RequestBody Aluno alunoRequest) {
         cadastroService.cadastrarAluno(
             alunoRequest.getNome(),
             alunoRequest.getDataNascimento(),
@@ -26,29 +28,46 @@ public class CadastroController {
             alunoRequest.getEmail(),
             alunoRequest.getTelefone()
         );
-        return "Aluno cadastrado com sucesso!";
+        return ResponseEntity.ok("Aluno cadastrado com sucesso!");
     }
+
+//    @GetMapping("/aluno/{cpf}")
+//    public ResponseEntity<Aluno> obterAluno(@PathVariable String cpf) {
+//        Aluno aluno = AlunoDAO.findByCpf(cpf);
+//        if (aluno != null) {
+//            return ResponseEntity.ok(aluno);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 
     @PostMapping("/professor")
     @ResponseBody
-    public String cadastrarProfessor(@RequestBody Professor professorRequest) {
+    public ResponseEntity<String> cadastrarProfessor(@RequestBody Professor professorRequest) {
         cadastroService.cadastrarProfessor(
             professorRequest.getNome(),
             professorRequest.getCpf(),
             professorRequest.getEmail(),
             professorRequest.getDisciplina()
         );
-        return "Professor cadastrado com sucesso!";
+        return ResponseEntity.ok("Professor cadastrado com sucesso!");
     }
+
+//    @GetMapping("/professor/{id}")
+//    public ResponseEntity<Professor> obterProfessor(@PathVariable Long id) {
+//        Professor professor = new Professor();
+//        return ResponseEntity.ok(professor);
+//    }
+
 
     @PostMapping("/fornecedor")
     @ResponseBody
-    public String cadastrarFornecedor(@RequestBody Fornecedor fornecedorRequest) {
+    public ResponseEntity<String> cadastrarFornecedor(@RequestBody Fornecedor fornecedorRequest) {
         cadastroService.cadastrarFornecedor(
             fornecedorRequest.getNome_fantasia(),
             fornecedorRequest.getCnpj(),
             fornecedorRequest.getTelefone()
         );
-        return "Fornecedor cadastrado com sucesso!";
+        return ResponseEntity.ok("Fornecedor cadastrado com sucesso!");
     }
 }
