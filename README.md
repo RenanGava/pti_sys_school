@@ -23,6 +23,9 @@ Este é um projeto Node.js com Express que oferece uma API REST para cadastrar a
 >
 >    - **Cadastro de Fornecedores**: Endpoint para cadastrar um novo fornecedor com os seguintes campos: nome fantasia, CNPJ e telefone.
 
+## Link do Figma
+https://www.figma.com/design/zDulNgpm092NGajc5XAGr0/Projeto-Integrador?node-id=54%3A64&t=yHcmdgqT7pxtFCiw-1
+
 ## Funcionalidades
 
 Cadastro de Alunos: Endpoint para cadastrar um novo aluno com os seguintes campos: nome, data de nascimento, CPF, endereço, e-mail e telefone.
@@ -49,8 +52,7 @@ O protótipo foi desenvolvido para representar o cadastro de alunos, professores
 
 <img width="1830" alt="Captura de Tela 2024-05-20 às 3 59 43PM" src="https://github.com/paularcsarruda/pti_sys_school/assets/122739036/c03ea11e-a83a-4cae-b90d-cc97d8c72f4d">
 
-<img width="1821" alt="Captura de Tela 2024-05-20 às 3 59 24PM" src="https://github.com/paularcsarruda/pti_sys_school/assets/122739036/821e90f3-95e3-4e2a-a0cb-4d5d60bb12cc">
-
+<img width="1837" alt="Captura de Tela 2024-05-20 às 5 46 57 PM" src="https://github.com/RenanGava/pti_sys_school/assets/122739036/dcaff769-b48e-4651-a0c0-dc5c147bbe5c">
 
 
 ## Instalação
