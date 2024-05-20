@@ -11,6 +11,7 @@ Cadastro de Professores: Endpoint para cadastrar um novo professor com os seguin
 Cadastro de Fornecedores: Endpoint para cadastrar um novo fornecedor com os seguintes campos: nome fantasia, CNPJ e telefone.
 
 ## Sumário
+- [Protótipo Figma](#protótipo-figma)
 - [Instalação](#instalação)
 - [Configuração](#configuração)
 - [Uso](#uso)
@@ -18,6 +19,18 @@ Cadastro de Fornecedores: Endpoint para cadastrar um novo fornecedor com os segu
 - [Rotas de Cadastro](#rotas-de-cadastro)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
+
+### Protótipo Figma
+
+>
+O protótipo foi desenvolvido para representar o cadastro de alunos, professores e fornecedores de uma universidade. A interface do usuário foi projetada para ser intuitiva e fácil de navegar, utilizando modais que permitem abrir exclusivamente o cadastro selecionado ao clicar em uma opção. 
+>
+
+<img width="1830" alt="Captura de Tela 2024-05-20 às 3 59 43PM" src="https://github.com/paularcsarruda/pti_sys_school/assets/122739036/c03ea11e-a83a-4cae-b90d-cc97d8c72f4d">
+
+<img width="1821" alt="Captura de Tela 2024-05-20 às 3 59 24PM" src="https://github.com/paularcsarruda/pti_sys_school/assets/122739036/821e90f3-95e3-4e2a-a0cb-4d5d60bb12cc">
+
+
 
 ## Instalação
 Instruções para configurar o ambiente e instalar as dependências do projeto.
@@ -55,7 +68,9 @@ Para iniciar o servidor de desenvolvimento:
 
 ```
 docker compose up --build <!--para rodar o banco de dados-->
-npm run start:dev
+
+<!--para rodar o servidor e renderizar as paginas-->
+npm run start:dev 
 ou
 yarn start:dev
 
@@ -94,18 +109,10 @@ PI_Senac/
     {
       "name": "Nome do Usuário",
       "email": "email@exemplo.com",
-      "password": "senha123"
-    }
-    ```
-  - **Response:**
-    ```json
-    {
-      "message": "Usuário registrado com sucesso",
-      "user": {
-        "id": 1,
-        "name": "Nome do Usuário",
-        "email": "email@exemplo.com"
-      }
+      "dataNascimento": "26/10/2001",
+      "cpf": "000.000.000-00",
+      "endereco": "rua fulano de tal n 44",
+      "tel": "(99)99999-9999"
     }
     ```
 
@@ -116,18 +123,10 @@ PI_Senac/
     {
       "name": "Nome do Usuário",
       "email": "email@exemplo.com",
-      "password": "senha123"
-    }
-    ```
-  - **Response:**
-    ```json
-    {
-      "message": "Usuário registrado com sucesso",
-      "user": {
-        "id": 1,
-        "name": "Nome do Usuário",
-        "email": "email@exemplo.com"
-      }
+      "cpf": "000.000.000-00",
+      "endereco": "rua fulano de tal n 44",
+      "tel": "(99)99999-9999",
+      "disciplina": "disciplina",
     }
     ```
 
@@ -138,18 +137,9 @@ PI_Senac/
     {
       "name": "Nome do Usuário",
       "email": "email@exemplo.com",
-      "password": "senha123"
-    }
-    ```
-  - **Response:**
-    ```json
-    {
-      "message": "Usuário registrado com sucesso",
-      "user": {
-        "id": 1,
-        "name": "Nome do Usuário",
-        "email": "email@exemplo.com"
-      }
+      "cnpj": "000.000.000-00",
+      "endereco": "rua fulano de tal n 44",
+      "tel": "(99)99999-9999"
     }
     ```
 
