@@ -1,11 +1,15 @@
 import { Request, Response } from "express";
-import { IControler } from "../Interfaces/IControler";
+import { ProfessorService } from "../Service/ProfessorService";
 
 
-export class ProfessorControler implements IControler{
+export class ProfessorControler{
 
-    async hanlde(req: Request, res: Response): Promise<void> {
+    async hanlde(req: Request, res: Response){
+        const professorService = new ProfessorService();
 
-        return
+        console.log(req.body);
+        await professorService.create(req.body)
+    
+        return res.render("index.ejs")
     }
 } 

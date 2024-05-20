@@ -2,23 +2,23 @@ import { prisma } from "../prisma/prisma"
 
 
 
-interface IProfessor{
+interface IAluno{
     nome: string
     cpf: string
+    dataNascimento: string
     tel: string
     email: string
     endereco: string
-    disciplina: string
 }
 
-export class ProfessorService{
+export class AlunoService{
 
-    async create(data: IProfessor){
+    async create(data: IAluno){
 
-        const professor = await prisma.professor.create({
+        const aluno = await prisma.aluno.create({
             data: {
                 cpf: data.cpf,
-                diciplina: data.disciplina,
+                dataNascimento: data.dataNascimento,
                 email: data.email,
                 endereco: data.endereco,
                 name: data.nome,
@@ -30,6 +30,6 @@ export class ProfessorService{
     }
 
     async list(){
-        return await prisma.professor.findMany()
+        return await prisma.aluno.findMany()
     }
 }

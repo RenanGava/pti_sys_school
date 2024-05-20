@@ -22,10 +22,10 @@
                     <button class="btn" onclick="openForm('professor')">Professor</button>
                     <button class="btn" onclick="openForm('fornecedor')">Fornecedor</button>
                 </div>
-                <form class="form" action="/cadastro" method="post" id="aluno">
+                <form class="form" action="/create" method="post" id="aluno">
                     <div class="labelForm">
                         <p>Nome</p>
-                        <input type="text" name="name">
+                        <input type="text" name="nome">
                     </div>
                     <div class="groupLabel">
                         <div class="labelForm">
@@ -52,18 +52,18 @@
                     
                     <input type="submit" value="Cadastrar" class="button">
                 </form>
-                <form class="form" id="professor">
+                <form class="form" id="professor" action="/create" method="post">
                     <div class="labelForm">
                         <p>Nome</p>
-                        <input type="text">
+                        <input type="text" name="nome">
                     </div>
                     <div class="labelForm">
                         <p>CPF</p>
-                        <input type="text">
+                        <input type="text" name="cpf">
                     </div>
                     <div class="labelForm">
                         <p>Email</p>
-                        <input type="email">
+                        <input type="email" name="email">
                     </div>
                     <div class="labelForm">
                         <p>Endereço</p>
@@ -71,11 +71,11 @@
                     </div>
                     <div class="labelForm">
                         <p>Telefone</p>
-                        <input type="text">
+                        <input type="text" name="tel">
                     </div>
                     <div class="labelForm">
                         <p>Disciplina</p>
-                        <input type="text">
+                        <input type="text" name="disciplina">
                     </div>
                     
                     <input type="submit" value="Cadastrar" class="button">
@@ -83,15 +83,15 @@
                 <form class="form" id="fornecedor">
                     <div class="labelForm">
                         <p>Nome Fantasia</p>
-                        <input type="text">
+                        <input type="text" name="nome">
                     </div>
                     <div class="labelForm">
                         <p>Email</p>
-                        <input type="email">
+                        <input type="email" name="email">
                     </div>
                     <div class="labelForm">
                         <p>CNPJ</p>
-                        <input type="text">
+                        <input type="text" name="cnpj">
                     </div>
                     <div class="labelForm">
                         <p>Endereço</p>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="labelForm">
                         <p>Telefone</p>
-                        <input type="text">
+                        <input type="text" name="tel">
                     </div>
                     
                     <input type="submit" value="Cadastrar" class="button">

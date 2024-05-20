@@ -27,7 +27,7 @@ model Professor {
   diciplina      String
 }
 
-model fornecedor {
+model Fornecedor {
   id             Int    @id @default(autoincrement())
   name           String
   email          String

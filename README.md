@@ -43,6 +43,7 @@ A aplicação estará disponível em [http://localhost:3000](http://localhost:30
 - Node Js
 - Express
 - PostgreSQL
+- Prisma ORM
 - HTML
 - CSS
 

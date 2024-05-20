@@ -1,27 +1,15 @@
 version: '3.9'
 
 services:
-
-  app:
-    build: .
-    # entrypoint: .docker/entrypoint.sh
-    container_name: pti_senac
-    ports:
-      - 3000:3000
-    volumes:
-      - .:/node/app
-    depends_on:
-      - postgres
-
   postgres:
     image: postgres:latest
     container_name: meu-postgres
     tty: true
     restart: always
     environment:
-      POSTGRES_DB: Universidade
+      POSTGRES_DB: universidade
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"
+      - "5444:5432"
     volumes:
       - .docker/dbdata:/var/lib/postgresql/data
