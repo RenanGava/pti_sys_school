@@ -23,15 +23,6 @@ Este é um projeto Node.js com Express que oferece uma API REST para cadastrar a
 >
 >    - **Cadastro de Fornecedores**: Endpoint para cadastrar um novo fornecedor com os seguintes campos: nome fantasia, CNPJ e telefone.
 
-### Tecnologias Utilizadas
-
-    - JavaScript/Typescript
-    - Express
-    - Prisma ORM
-    - PostgreSQL
-    - HTML
-    - CSS
-
 ## Funcionalidades
 
 Cadastro de Alunos: Endpoint para cadastrar um novo aluno com os seguintes campos: nome, data de nascimento, CPF, endereço, e-mail e telefone.
