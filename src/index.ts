@@ -18,10 +18,17 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use("/create", createRouter)
 
 
+
+
+
+
+
+
 app.get("/", (req: Request, res: Response) => {
-    
     res.render('index.ejs')
 })
+
+
 
 app.listen(3000, () => {
     console.log("Rodando!");

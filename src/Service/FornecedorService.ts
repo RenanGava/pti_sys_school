@@ -1,22 +1,21 @@
 import { prisma } from "../prisma/prisma"
 
-interface IAluno{
+interface IFornecedor{
     nome: string
-    cpf: string
-    dataNascimento: string
+    cnpj: string
     tel: string
     email: string
     endereco: string
+    disciplina: string
 }
 
-export class AlunoService{
+export class FornecedorService{
 
-    async create(data: IAluno){
+    async create(data: IFornecedor){
 
-        const aluno = await prisma.aluno.create({
+        const fornecedor = await prisma.fornecedor.create({
             data: {
-                cpf: data.cpf,
-                dataNascimento: data.dataNascimento,
+                cnpj: data.cnpj,
                 email: data.email,
                 endereco: data.endereco,
                 name: data.nome,
@@ -24,10 +23,10 @@ export class AlunoService{
             }
         })
 
-        return aluno
+        return
     }
 
     async list(){
-        return await prisma.aluno.findMany()
+        return await prisma.professor.findMany()
     }
 }

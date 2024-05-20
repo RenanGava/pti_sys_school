@@ -1,7 +1,5 @@
 import { prisma } from "../prisma/prisma"
 
-
-
 interface IProfessor{
     nome: string
     cpf: string

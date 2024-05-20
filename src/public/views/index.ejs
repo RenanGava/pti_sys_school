@@ -22,7 +22,7 @@
                     <button class="btn" onclick="openForm('professor')">Professor</button>
                     <button class="btn" onclick="openForm('fornecedor')">Fornecedor</button>
                 </div>
-                <form class="form" action="/create" method="post" id="aluno">
+                <form class="form" action="/create/aluno" method="post" id="aluno">
                     <div class="labelForm">
                         <p>Nome</p>
                         <input type="text" name="nome">
@@ -52,7 +52,7 @@
                     
                     <input type="submit" value="Cadastrar" class="button">
                 </form>
-                <form class="form" id="professor" action="/create" method="post">
+                <form class="form" id="professor" action="/create/professor" method="post">
                     <div class="labelForm">
                         <p>Nome</p>
                         <input type="text" name="nome">
@@ -80,7 +80,7 @@
                     
                     <input type="submit" value="Cadastrar" class="button">
                 </form>
-                <form class="form" id="fornecedor">
+                <form class="form" id="fornecedor" action="/create/fornecedor" method="post">
                     <div class="labelForm">
                         <p>Nome Fantasia</p>
                         <input type="text" name="nome">

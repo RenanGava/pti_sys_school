@@ -25,7 +25,7 @@ Instruções para configurar o ambiente e instalar as dependências do projeto.
 ```bash
 git clone https://github.com/RenanGava/pti_sys_school.git
 cd pti_sys_school
-npm install
+npm install ou yarn install
 ```
 
 ## Configuração
@@ -54,7 +54,10 @@ Instruções sobre como iniciar e usar o projeto.
 Para iniciar o servidor de desenvolvimento:
 
 ```
-npm start
+docker compose up --build <!--para rodar o banco de dados-->
+npm run start:dev
+ou
+yarn start:dev
 
 ```
 
@@ -62,20 +65,18 @@ npm start
 Descrição da estrutura de diretórios do projeto.
 
 ```
-nome-do-projeto/
+PI_Senac/
 ├── node_modules/
 ├── prisma/
 ├── src/
 │   ├── controllers/
-│   ├── interfaces/
-│   ├── models/
+|   ├── prisma/
 │   ├── public/
 │   │   ├── css/
 |   |   ├── assets/
-|   |   ├── viewa/
+|   |   ├── views/
 │   │   └── js/
-│   ├── services/
-│   └── views/
+│   └── services/
 ├── tests/
 ├── .env
 ├── .gitignore
@@ -87,7 +88,7 @@ nome-do-projeto/
 ## Rotas de Cadastro
 
 ### Usuários
-- `POST /users/register` - Registra um novo usuário.
+- `POST /create/aluno` - Registra um novo usuário.
   - **Request Body:**
     ```json
     {
@@ -108,15 +109,50 @@ nome-do-projeto/
     }
     ```
 
-- `GET /users/:id` - Retorna detalhes de um usuário específico.
+### Usuários
+- `POST /create/professor` - Registra um novo usuário.
+  - **Request Body:**
+    ```json
+    {
+      "name": "Nome do Usuário",
+      "email": "email@exemplo.com",
+      "password": "senha123"
+    }
+    ```
   - **Response:**
     ```json
     {
-      "id": 1,
-      "name": "Nome do Usuário",
-      "email": "email@exemplo.com"
+      "message": "Usuário registrado com sucesso",
+      "user": {
+        "id": 1,
+        "name": "Nome do Usuário",
+        "email": "email@exemplo.com"
+      }
     }
     ```
+
+### Usuários
+- `POST /create/fornecedor` - Registra um novo usuário.
+  - **Request Body:**
+    ```json
+    {
+      "name": "Nome do Usuário",
+      "email": "email@exemplo.com",
+      "password": "senha123"
+    }
+    ```
+  - **Response:**
+    ```json
+    {
+      "message": "Usuário registrado com sucesso",
+      "user": {
+        "id": 1,
+        "name": "Nome do Usuário",
+        "email": "email@exemplo.com"
+      }
+    }
+    ```
+
 
 ## Contribuição
 
